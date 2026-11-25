@@ -10,5 +10,7 @@ export async function connectDB(){
         console.log('Connected to database');
     } catch (error) {
         console.log(error);
+        // Sin base de datos el server no sirve: salir para que Render lo marque como fallido.
+        process.exit(1)
     }
 }
